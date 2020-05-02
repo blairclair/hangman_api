@@ -27,7 +27,7 @@ def CheckWord(let,word,current):
 				NewWord = NewWord + let
 				print("nw", NewWord)
 			else:
-				NewWord = NewWord + current[j]
+				NewWord = NewWord + current[j] + " "
 			j = j + 2
 		return NewWord
 	return current
