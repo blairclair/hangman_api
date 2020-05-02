@@ -11,7 +11,7 @@ def GetFirstDisplay(word):
 	i = 0
 	WordLen = len(word)
 	while i < WordLen:
-		NewWord = NewWord + "_"
+		NewWord = NewWord + "_ "
 		i = i + 1
 	return NewWord
 
