@@ -20,12 +20,15 @@ def CheckWord(let,word,current):
 	let = let[0]
 	if let in word:
 		NewWord = ""
-		for i in range(0,len(word)):
+		j = 0
+		LenWord = len(word)
+		for i in range(0,LenWord):
 			if word[i] == let:
 				NewWord = NewWord + let
 				print("nw", NewWord)
 			else:
-				NewWord = NewWord + current[i]
+				NewWord = NewWord + current[j]
+			j = j + 2
 		return NewWord
 	return current
 
