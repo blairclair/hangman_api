@@ -7,16 +7,18 @@ HardWords = ["abruptly","absurd","abyss","affix","askew","avenue","awkward","axi
 
 @app.route('/checkletter/<let>/<word>/<current>')
 def CheckWord(let,word,current):
-	return word
-	# if let in word:
-	# 	NewWord = ""
-	# 	for i in range(0,len(word)):
-	# 		if word[i] == let:
-	# 			NewWord = NewWord + let
-	# 		else:
-	# 			NewWord = NewWord + current[i]
-	# 	return NewWord
-	# return current
+	let = let[0]
+	if let in word:
+		print("yeas")
+		NewWord = ""
+		for i in range(0,len(word)):
+			if word[i] == let:
+				NewWord = NewWord + let
+				print("nw", NewWord)
+			else:
+				NewWord = NewWord + current[i]
+		return NewWord
+	return current
 
 @app.route('/easy', methods=['GET'])
 def GetEasyWord():
