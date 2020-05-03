@@ -11,7 +11,7 @@ def GetFirstDisplay(word):
 	i = 0
 	WordLen = len(word)
 	while i < WordLen:
-		NewWord = NewWord + "_ "
+		NewWord = NewWord + "-"
 		i = i + 1
 	return NewWord
 
@@ -20,15 +20,12 @@ def CheckWord(let,word,current):
 	let = let[0]
 	if let in word:
 		NewWord = ""
-		j = 0
 		LenWord = len(word)
 		for i in range(0,LenWord):
 			if word[i] == let:
 				NewWord = NewWord + let
-				print("nw", NewWord)
 			else:
-				NewWord = NewWord + current[j] + " "
-			j = j + 2
+				NewWord = NewWord + current[i]
 		return NewWord
 	return current
 
